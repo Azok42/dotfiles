@@ -1,0 +1,109 @@
+{
+	"spacing": 4,
+	"height": 30,
+	"width": 1590,
+
+	"margin-top": 4,
+
+	"modules-left":
+	[
+		"custom/logo",
+		"hyprland/workspaces",
+		"tray",
+		"mpris"
+	],
+
+	"modules-center":
+	[
+		"clock"
+	],
+
+	"modules-right":
+	[
+		"cpu",
+		"memory",
+		"network",
+		"network#speed",
+		"bluetooth",
+		"backlight",
+		"battery"
+	],
+
+	"custom/logo":
+	{
+		"format": "<big>󰣇</big>"
+	},
+
+	"mpris": {
+		"format": "DEFAULT: {player_icon} {dynamic}",
+		"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		}
+	},
+
+	"network": {
+    	"interface": "wlp0s20f3",
+		"format": "<big>󰖩</big>",
+    	"format-alt": "{signalStrength}% {essid} <big>󰖩</big>",
+    	"format-disconnected": "󰖪",
+    	"tooltip-format-wifi": "{ipaddr} /{cidr}",
+    	"tooltip-format-disconnected": "Disconnected",
+    	"max-length": 50
+	},
+
+	"network#speed": {
+    	"interface": "wlp0s20f3",
+    	"format-wifi": "{bandwidthDownBytes} 󰇚",
+    	"format-alt": "{bandwidthUpBytes} 󰕒",
+    	"format-disconnected": "Meh",
+    	"tooltip-format-wifi": "{ipaddr} /{cidr}",
+    	"tooltip-format-disconnected": "Disconnected",
+    	"max-length": 50,
+		"interval": 3
+	},
+
+	"bluetooth": {
+		"format": "󰂯",
+		"format-connected": "{num_connections} 󰂯",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
+	},
+
+	"backlight":
+	{
+		"format": "{percent}% <big>{icon}</big>",
+		"format-icons": ["󰃞", "󰃟", "󰃠"],
+		"on-scroll-up": "brightnessctl -e4 -n2 set 2.5%+",
+		"on-scroll-down": "brightnessctl -e4 -n2 set 2.5%-"
+	},
+
+	"clock":
+	{
+		"format": "<big>{:%d  -  %H:%M}</big>",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+
+	"battery":
+	{
+		"interval": 15,
+		"format": "{capacity}% <big>{icon}</big>",
+		"format-icons": ["", "", "", "", ""]
+	},
+
+	"cpu":
+	{
+		"format": "{usage}% "
+	},
+
+	"memory":
+	{
+		"format": "{percentage}% <big></big>"
+	}
+}
