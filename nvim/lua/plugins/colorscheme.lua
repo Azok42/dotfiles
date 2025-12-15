@@ -1,4 +1,5 @@
-function colorTheme(color) 
+-- Set the color theme to color or default if not set
+function setTheme(color) 
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 end

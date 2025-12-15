@@ -34,4 +34,4 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-colorTheme()
+setTheme()
