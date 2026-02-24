@@ -1,5 +1,5 @@
 return {
 	cmd = {'marksman'},
-	filetypes = {'md'},
+	filetypes = {'md', 'text', ''},
 	root_markers = {},
 }

@@ -93,7 +93,7 @@
 	"battery":
 	{
 		"interval": 15,
-		"format": "{capacity}% <big>{icon}</big>",
+		"format": "{capacity}% {icon}",
 		"format-icons": ["", "", "", "", ""]
 	},
 

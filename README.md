@@ -6,6 +6,10 @@ These are my very horrible written configs for my Laptop
 
 - Arch
 - Hyprland
+- Hyprpaper
+- Hyprshot
+- Hyprpicker
+- Hyprlock
 - Ly
 - Rofi
 - Fastfetch
