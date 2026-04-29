@@ -9,8 +9,7 @@
 	[
 		"custom/logo",
 		"hyprland/workspaces",
-		"tray",
-		"mpris"
+		"tray"
 	],
 
 	"modules-center":
@@ -31,7 +30,10 @@
 
 	"custom/logo":
 	{
-		"format": "<big>󰣇</big>"
+		"format": "<big>󰣇</big>",
+		"interval": 300,
+		"exec": "pacman -Qq | wc -l",
+		"tooltip-format": "Insatlled Packages: {text}"
 	},
 
 	"mpris": {
@@ -64,7 +66,7 @@
     	"tooltip-format-wifi": "{ipaddr} /{cidr}",
     	"tooltip-format-disconnected": "Disconnected",
     	"max-length": 50,
-		"interval": 3
+		"interval": 1
 	},
 
 	"bluetooth": {
@@ -92,9 +94,13 @@
 
 	"battery":
 	{
-		"interval": 15,
+		"interval": 8,
 		"format": "{capacity}% {icon}",
-		"format-icons": ["", "", "", "", ""]
+		"format-charging": "{capacity}% <big>{icon}</big>",
+		"format-icons": {
+			"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+			"charging": ["󰂆", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂅"]
+		}
 	},
 
 	"cpu":
