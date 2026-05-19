@@ -1,5 +1,5 @@
-require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "c", "java", "c_sharp", "cpp", "lua", "json", "xml", "html", "css", "hyprlang", "markdown", "dockerfile"},
+require 'nvim-treesitter.configs'.setup {
+	ensure_installed = { "c", "java", "c_sharp", "cpp", "lua", "json", "xml", "html", "css", "markdown"},
 
 	sync_install = false,
 
